@@ -13,7 +13,7 @@ actually work.
 - **Tailwind CSS** for layout/utility classes, combined with a hand-written
   `globals.css` for the brand-specific pieces (gradients, glassy cards,
   the `enhanced-input`/`enhanced-submit` form controls, the energy orb,
-  animations) ported straight from your original `style.css` / `login.css`
+  animations) ported straight from the original's `style.css` / `login.css`
   / `signup.css`.
 - **Chart.js** (`react-chartjs-2`) for the weekly energy graph, replacing
   the vanilla Chart.js `<script>` setup in `tabs/energy.php`.
@@ -52,12 +52,12 @@ time the app runs:
 
 ## About the database layer
 
-Your original app talked to **MySQL**. This environment couldn't reach a
+The original app talked to **MySQL**. This environment couldn't reach a
 MySQL server, so `src/lib/db.ts` persists to a JSON file
 (`data/db.json`) instead — but every function in that file
 (`getUserByEmail`, `createUser`, `listRecentSessions`, ...) is written
 with a comment showing the exact SQL query it replaces, and the schema
-(`src/types/index.ts`) mirrors your original `users` / `sessions` /
+(`src/types/index.ts`) mirrors the original `users` / `sessions` /
 `stations` / `reports` tables field-for-field.
 
 **To connect this to real MySQL:**
