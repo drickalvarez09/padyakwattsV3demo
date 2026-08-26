@@ -168,7 +168,7 @@ export default function LoginPage() {
       </div>
 
       <footer className="mt-12 text-center text-gray-500 text-sm">
-        <p>© 2026 PADYAKWATTS. Powering communities with clean energy.</p>
+        <p>© 2024 PADYAKWATTS. Powering communities with clean energy.</p>
       </footer>
     </main>
   );

@@ -29,7 +29,18 @@ interface DbShape {
   reports: Report[];
 }
 
-const DB_PATH = path.join(process.cwd(), "data", "db.json");
+// On Vercel (and most serverless hosts) the deployed bundle at
+// process.cwd() is READ-ONLY — the only writable path is /tmp. Locally,
+// process.cwd() is your project folder, so we keep using ./data there
+// (handy for inspecting db.json directly / persisting between `npm run dev`
+// restarts). On Vercel we fall back to /tmp — note this is NOT durable
+// storage: it can be wiped on cold starts and isn't shared across
+// concurrent instances, so signups/data made this way are demo-only and
+// can disappear. See README "About the database layer" for the real fix.
+const DATA_DIR = process.env.VERCEL
+  ? path.join("/tmp", "padyakwatts-data")
+  : path.join(process.cwd(), "data");
+const DB_PATH = path.join(DATA_DIR, "db.json");
 
 const STATIONS_SEED: Station[] = [
   { id: "st_1", name: "PADYAKWATTS Hub — QC Circle", location: "Quezon City Circle, Quezon City", status: "active" },

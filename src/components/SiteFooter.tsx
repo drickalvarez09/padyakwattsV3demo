@@ -82,7 +82,7 @@ export default function SiteFooter() {
 
           <div className="mt-16 pt-8 border-t border-white/20 text-center space-y-4">
             <p className="text-white/70">
-              © 2026 PADYAKWATTS. All rights reserved. |{" "}
+              © 2024 PADYAKWATTS. All rights reserved. |{" "}
               <a className="text-white/80 hover:text-white hover:underline" href="#">
                 Privacy Policy
               </a>{" "}
