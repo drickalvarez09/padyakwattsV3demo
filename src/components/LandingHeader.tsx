@@ -51,17 +51,19 @@ export default function LandingHeader() {
       }`}
     >
       <div
-        className={`max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-300 ${
+        className={`max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between transition-all duration-300 ${
           scrolled ? "py-3" : "py-4"
         }`}
       >
-        <a href="#overview" className="flex items-center space-x-3 group">
-          <div className="energy-orb animate-pulse-glow transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">
+        <a href="#overview" className="flex items-center space-x-2 sm:space-x-3 group min-w-0">
+          <div className="energy-orb flex-shrink-0 animate-pulse-glow transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">
             <i className="fas fa-bolt" />
           </div>
-          <div>
-            <h1 className="text-2xl font-bold gradient-text tracking-tight">PADYAKWATTS</h1>
-            <p className="text-xs text-gray-500">Clean Energy Initiative</p>
+          <div className="min-w-0">
+            <h1 className="text-lg sm:text-2xl font-bold gradient-text tracking-tight truncate">
+              PADYAKWATTS
+            </h1>
+            <p className="hidden sm:block text-xs text-gray-500">Clean Energy Initiative</p>
           </div>
         </a>
 
@@ -81,10 +83,10 @@ export default function LandingHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center space-x-4">
-          <Link href="/login" className="btn-energy py-2 px-6 text-sm">
-            <i className="fas fa-sign-in-alt mr-2" />
-            Login
+        <div className="flex items-center space-x-2 sm:space-x-4 flex-shrink-0">
+          <Link href="/login" className="btn-energy py-2 px-3 sm:px-6 text-sm whitespace-nowrap">
+            <i className="fas fa-sign-in-alt sm:mr-2" />
+            <span className="hidden sm:inline">Login</span>
           </Link>
           <button
             aria-label="Toggle menu"

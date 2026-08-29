@@ -72,7 +72,7 @@ export default async function DashboardPage({
 
   return (
     <div className="text-gray-800" style={{ background: "linear-gradient(135deg, #f8fafc 0%, #f0fdf4 100%)" }}>
-      <div className="flex min-h-screen">
+      <div className="flex flex-col md:flex-row min-h-screen">
         <DashboardSidebar
           activeTab={activeTab}
           userName={`${user.first_name} ${user.last_name}`}
@@ -80,7 +80,7 @@ export default async function DashboardPage({
           todayEnergy={todayEnergy}
         />
 
-        <main className="flex-1 p-4 md:p-6">
+        <main className="flex-1 min-w-0 p-4 md:p-6">
           <div className="dashboard-container bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 md:p-8 min-h-[calc(100vh-2rem)] border border-green-100 fade-in">
             {activeTab === "energy" && (
               <EnergyTab

@@ -79,8 +79,8 @@ export default function EnergyTab({
       <div className="stats-card p-6">
         <h3 className="text-xl font-semibold text-green-800 mb-4">Total Energy Generated</h3>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="flex items-center space-x-6">
-            <div className="relative">
+          <div className="flex flex-col sm:flex-row items-center text-center sm:text-left gap-4 sm:gap-6">
+            <div className="relative flex-shrink-0">
               <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-teal-400 flex items-center justify-center">
                 <i className="fas fa-bolt text-white text-3xl" />
               </div>
@@ -88,12 +88,12 @@ export default function EnergyTab({
                 <span className="text-green-600 font-bold">↑</span>
               </div>
             </div>
-            <div>
+            <div className="min-w-0">
               <p className="text-3xl font-bold text-gray-800">
                 {totalEnergy.toFixed(1)} <span className="text-lg text-gray-600">Wh</span>
               </p>
               <p className="text-gray-600 mt-1">Lifetime generation</p>
-              <div className="flex items-center mt-2 text-green-600">
+              <div className="flex items-center justify-center sm:justify-start flex-wrap mt-2 text-green-600">
                 <i className="fas fa-arrow-up mr-1" />
                 <span className="font-semibold">{pointsEarned.toLocaleString()} points</span>
                 <span className="text-gray-500 ml-2">earned</span>

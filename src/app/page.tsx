@@ -79,7 +79,7 @@ export default function LandingPage() {
     <>
       <LandingHeader />
 
-      <main className="max-w-7xl mx-auto px-6 py-12 relative z-10">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 relative z-10">
         {/* Hero */}
         <section className="relative rounded-3xl overflow-hidden mb-20" id="overview">
           <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-teal-50 to-blue-50" />
@@ -89,7 +89,7 @@ export default function LandingPage() {
             style={{ animationDelay: "1.2s" }}
           />
 
-          <div className="relative flex flex-col-reverse md:flex-row items-center gap-12 p-8 md:p-12">
+          <div className="relative flex flex-col-reverse md:flex-row items-center gap-12 p-6 sm:p-8 md:p-12">
             <div className="md:w-1/2">
               <Reveal direction="up">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-700 font-semibold text-sm mb-6">
@@ -203,7 +203,7 @@ export default function LandingPage() {
                 <Reveal key={f.title} delay={i * 90}>
                   <SpotlightCard
                     glow={tone.glow}
-                    className="group relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 h-full"
+                    className="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 h-full"
                   >
                     <div
                       className={`w-16 h-16 rounded-xl ${tone.iconBg} flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg`}
@@ -226,7 +226,7 @@ export default function LandingPage() {
         {/* Goals */}
         <section className="mb-20" id="goals">
           <Reveal>
-            <div className="bg-gradient-to-br from-green-500 via-teal-500 to-emerald-600 rounded-3xl p-8 md:p-12 relative overflow-hidden">
+            <div className="bg-gradient-to-br from-green-500 via-teal-500 to-emerald-600 rounded-3xl p-6 sm:p-8 md:p-12 relative overflow-hidden">
               <div className="absolute inset-0 opacity-20" style={{
                 backgroundImage: "radial-gradient(circle at 20% 20%, white 0, transparent 45%), radial-gradient(circle at 80% 70%, white 0, transparent 40%)"
               }} />
@@ -288,7 +288,7 @@ export default function LandingPage() {
                       <SpotlightCard
                         glow={tone.glow}
                         tilt={false}
-                        className="group flex items-start space-x-6 p-6 rounded-2xl bg-white shadow-lg border border-gray-100 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
+                        className="group flex flex-col sm:flex-row items-start sm:space-x-6 gap-4 sm:gap-0 p-6 rounded-2xl bg-white shadow-lg border border-gray-100 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
                       >
                         <div className={`w-16 h-16 rounded-xl ${tone.iconBg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-500 shadow-lg`}>
                           <i className={`fas ${u.icon} text-2xl ${tone.iconText}`} />
@@ -308,7 +308,7 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <Reveal direction="right" className="sticky top-24">
+            <Reveal direction="right" className="lg:sticky lg:top-24">
               <div className="bg-gradient-to-br from-white to-green-50 rounded-2xl p-8 shadow-xl border border-green-100">
                 <div className="text-center mb-8">
                   <div className="energy-orb mx-auto mb-4 animate-pulse-glow" style={{ width: 56, height: 56 }}>
@@ -379,7 +379,7 @@ export default function LandingPage() {
                     <Reveal key={c.title} direction="left" delay={i * 100}>
                       <SpotlightCard
                         glow={tone.glow}
-                        className="group relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
+                        className="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
                       >
                         <div className={`w-16 h-16 rounded-xl ${tone.iconBg} flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-500 shadow-lg`}>
                           <i className={`fas ${c.icon} text-2xl ${tone.iconText}`} />
@@ -397,7 +397,7 @@ export default function LandingPage() {
               </div>
 
               <div className="lg:col-span-2">
-                <Reveal direction="right" className="sticky top-24">
+                <Reveal direction="right" className="lg:sticky lg:top-24">
                   <div className="bg-gradient-to-br from-white to-green-50 rounded-2xl p-8 shadow-xl border border-green-100">
                     <div className="text-center mb-8">
                       <div className="energy-orb mx-auto mb-4 animate-pulse-glow" style={{ width: 56, height: 56 }}>

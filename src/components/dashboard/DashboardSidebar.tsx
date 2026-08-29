@@ -33,8 +33,17 @@ export default function DashboardSidebar({
         <div className="w-8" />
       </header>
 
+      {/* Tap-outside-to-close backdrop, mobile only */}
+      <div
+        aria-hidden="true"
+        onClick={() => setOpen(false)}
+        className={`md:hidden fixed inset-0 bg-black/50 z-30 transition-opacity duration-300 ${
+          open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+      />
+
       <aside
-        className={`sidebar text-white min-w-[17rem] max-w-[22rem] min-h-screen fixed md:static top-0 left-0 transform transition-transform duration-300 ease-in-out z-40 flex flex-col ${
+        className={`sidebar text-white w-72 max-w-[85vw] min-h-screen fixed md:static top-0 left-0 transform transition-transform duration-300 ease-in-out z-40 flex flex-col ${
           open ? "translate-x-0" : "-translate-x-full md:translate-x-0"
         }`}
       >
@@ -50,11 +59,11 @@ export default function DashboardSidebar({
 
         <div className="px-6 py-4 border-b border-green-500/30">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
               <i className="fas fa-user text-white" />
             </div>
-            <div>
-              <p className="font-semibold">{userName}</p>
+            <div className="min-w-0">
+              <p className="font-semibold truncate">{userName}</p>
               <p className="text-xs text-white/70">{userPoints.toLocaleString()} Points</p>
             </div>
           </div>
@@ -65,6 +74,7 @@ export default function DashboardSidebar({
             <Link
               key={tab.key}
               href={`/dashboard?tab=${tab.key}`}
+              onClick={() => setOpen(false)}
               className={`tab-btn flex items-center space-x-3 px-4 py-3 rounded-lg ${
                 activeTab === tab.key ? "active" : ""
               }`}

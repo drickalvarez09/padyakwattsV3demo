@@ -165,7 +165,7 @@ export default function ReportTab({
             </div>
           </div>
 
-          <div className="flex justify-end space-x-4 pt-4">
+          <div className="flex flex-col sm:flex-row sm:justify-end gap-3 sm:gap-4 pt-4">
             <button
               type="button"
               className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
@@ -178,7 +178,7 @@ export default function ReportTab({
             </button>
             <button
               type="submit"
-              className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors flex items-center"
+              className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors flex items-center justify-center"
               disabled={submitting}
             >
               <i className="fas fa-paper-plane mr-2" />
